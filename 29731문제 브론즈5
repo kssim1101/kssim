@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int N = sc.nextInt();
+        sc.nextLine();  // 버퍼를 비우기 위한 nextLine()
+
+        boolean isChanged = false;
+
+        for (int i = 0; i < N; i++) {
+            String b = sc.nextLine();
+            
+            if (!b.equals("Never gonna give you up") &&
+                !b.equals("Never gonna let you down") &&
+                !b.equals("Never gonna run around and desert you") &&
+                !b.equals("Never gonna make you cry") &&
+                !b.equals("Never gonna say goodbye") &&
+                !b.equals("Never gonna tell a lie and hurt you") &&
+                !b.equals("Never gonna stop")) {
+                isChanged = true;
+                break;
+            }
+        }
+
+        if (isChanged) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
